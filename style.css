@@ -146,7 +146,7 @@ body {
 }
 
 .slide-1 {
-    background: linear-gradient(135deg, #0066CC 0%, #004499 100%);
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
 }
 
 .slide-2 {
@@ -256,7 +256,7 @@ body {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    border: 2px solid #0066CC;
+    border: 2px solid #FFD700;
     width: 100%;
     max-width: 400px;
 }
@@ -426,8 +426,8 @@ body {
 }
 
 .service-price {
-    background: #0066CC;
-    color: white;
+    background: #FFD700;
+    color: #000;
     padding: 10px 20px;
     border-radius: 25px;
     font-weight: 600;
@@ -478,7 +478,7 @@ body {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: all 0.3s;
-    border: 2px solid #0066CC;
+    border: 2px solid #FFD700;
 }
 
 .package-card:hover {
@@ -514,8 +514,8 @@ body {
 }
 
 .package-price {
-    background: #0066CC;
-    color: white;
+    background: #FFD700;
+    color: #000;
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: 600;
@@ -553,7 +553,7 @@ body {
 .feature-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #0066CC, #004499);
+    background: linear-gradient(135deg, #FFD700, #FFA500);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -563,7 +563,7 @@ body {
 
 .feature-icon i {
     font-size: 2rem;
-    color: white;
+    color: #000;
 }
 
 .feature-card h4 {
@@ -675,12 +675,12 @@ body {
 .image-placeholder {
     width: 300px;
     height: 300px;
-    background: #0066CC;
+    background: #FFD700;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #000;
 }
 
 .about-stats {
@@ -731,14 +731,61 @@ body {
 
 .contact-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 1rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .contact-item i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #FF6600;
-    width: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.office-locations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.office-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.office-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.office-item i {
+    font-size: 2.5rem;
+    color: #FF6600;
+    margin-bottom: 0.5rem;
 }
 
 .contact-form {
@@ -750,7 +797,7 @@ body {
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
-    border: 2px solid #0066CC;
+    border: 2px solid #FFD700;
     border-radius: 5px;
     font-size: 1rem;
 }
@@ -835,30 +882,1105 @@ body {
     }
 }
 
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #000;
+    padding: 120px 0 60px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* About Page Styles */
+.about-content {
+    padding: 80px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2, .about-text h3 {
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    color: #FF6600;
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.stats-section {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #FFD700;
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.stat-card i {
+    font-size: 3rem;
+    color: #FF6600;
+    margin-bottom: 1rem;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.team-section {
+    padding: 80px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #FFD700;
+    transition: all 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.team-image {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #FF6600, #E55A00);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+}
+
+.team-card h4 {
+    color: #000;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.team-card p {
+    color: #FF6600;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.team-card span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.values-section {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 1px solid #FFD700;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.value-card h4 {
+    color: #000;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Contact Page Styles */
+.contact-main {
+    padding: 80px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info h2 {
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.contact-items {
+    margin-top: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contact-item i {
+    font-size: 2.5rem;
+    color: #FF6600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item h4 {
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+    color: #000;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    padding: 15px;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #FF6600;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.2);
+}
+
+.branches {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.branches h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.branch-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 4px solid #FF6600;
+    transition: all 0.3s;
+}
+
+.branch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.branch-card h4 {
+    color: #FF6600;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.branch-card p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.branch-card i {
+    color: #FFD700;
+    margin-right: 0.5rem;
+}
+
+.faq-section {
+    padding: 80px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 4px solid #FFD700;
+    transition: all 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.faq-item h4 {
+    color: #FF6600;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Tours Page Styles */
+.tour-categories {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.tour-categories h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.category-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 2px solid #FFD700;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #FF6600;
+}
+
+.category-card i {
+    font-size: 3rem;
+    color: #FF6600;
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.category-card p {
+    color: #666;
+}
+
+.popular-tours {
+    padding: 80px 0;
+}
+
+.popular-tours h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.tour-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 1px solid #FFD700;
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.tour-image {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    padding: 3rem;
+    text-align: center;
+    color: #000;
+    position: relative;
+}
+
+.tour-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #FF6600;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tour-content {
+    padding: 2rem;
+}
+
+.tour-content h3 {
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tour-duration {
+    color: #FF6600;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.tour-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.tour-includes {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.tour-includes li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.tour-includes i {
+    color: #FF6600;
+    margin-right: 0.5rem;
+}
+
+.tour-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.tour-price span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.custom-tour {
+    background: linear-gradient(135deg, #FF6600, #E55A00);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.custom-tour h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.custom-tour p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.custom-features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.custom-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.custom-feature i {
+    font-size: 1.2rem;
+}
+
+/* Car Rental Styles */
+.rental-options {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.rental-options h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.option-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 2px solid #FFD700;
+}
+
+.option-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.option-card i {
+    font-size: 3rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.option-card h3 {
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.option-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.option-card .price {
+    background: #FF6600;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.car-fleet {
+    padding: 80px 0;
+}
+
+.car-fleet h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.car-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 1px solid #FFD700;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.car-image {
+    background: linear-gradient(135deg, #FF6600, #E55A00);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.car-details {
+    padding: 2rem;
+}
+
+.car-details h3 {
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.car-models {
+    color: #FF6600;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.car-features {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.car-features li {
+    margin-bottom: 0.5rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.car-features i {
+    color: #FFD700;
+    margin-right: 0.5rem;
+    width: 20px;
+}
+
+.car-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FF6600;
+    margin-bottom: 1rem;
+}
+
+.rental-booking {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 80px 0;
+}
+
+.booking-section {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 2px solid #FFD700;
+}
+
+.booking-section h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.rental-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rental-features {
+    padding: 80px 0;
+}
+
+.rental-features h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Wedding Page Styles */
+.wedding-header {
+    background: linear-gradient(135deg, #FF6600 0%, #E55A00 100%);
+    color: white;
+}
+
+.wedding-services {
+    padding: 80px 0;
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.services-intro h2 {
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.services-intro p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.wedding-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.wedding-service {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #FFD700;
+    transition: all 0.3s;
+}
+
+.wedding-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.wedding-service i {
+    font-size: 3rem;
+    color: #FF6600;
+    margin-bottom: 1rem;
+}
+
+.wedding-service h3 {
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.wedding-service p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.wedding-fleet {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.wedding-fleet h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.wedding-cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.wedding-car-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 1px solid #FFD700;
+}
+
+.wedding-car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.wedding-car-card .car-image {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    position: relative;
+}
+
+.car-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #FF6600;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.car-info {
+    padding: 2rem;
+}
+
+.car-info h3 {
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.wedding-packages {
+    padding: 80px 0;
+}
+
+.wedding-packages h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.wedding-packages .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.wedding-packages .package-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    position: relative;
+    border: 1px solid #FFD700;
+}
+
+.package-card.popular {
+    border: 3px solid #FF6600;
+    transform: scale(1.05);
+}
+
+.package-header {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FF6600;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.package-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.package-price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.package-features {
+    list-style: none;
+    padding: 2rem;
+}
+
+.package-features li {
+    margin-bottom: 1rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.package-features i {
+    color: #FF6600;
+    margin-right: 0.5rem;
+}
+
+.wedding-booking {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 80px 0;
+}
+
+.booking-form-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 2px solid #FFD700;
+}
+
+.booking-form-section h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.wedding-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wedding-features {
+    padding: 80px 0;
+}
+
+.wedding-features h2 {
+    text-align: center;
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Floating Buttons */
+.floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.whatsapp-btn {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.scroll-top-btn {
+    width: 60px;
+    height: 60px;
+    background: #FF6600;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn:hover {
+    background: #E55A00;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(37, 211, 102, 0.8);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        left: -100%;
+        left: -200px;
         top: 70px;
         flex-direction: column;
         background-color: white;
-        width: 100%;
-        text-align: center;
+        width: 200px;
+        text-align: left;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-        padding: 2rem 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        padding: 0.5rem 0;
         z-index: 1000;
+        border-radius: 0 0 10px 0;
+        border-right: 2px solid #FFD700;
     }
 
     .nav-menu .nav-link {
-        padding: 1rem 0;
+        padding: 0.8rem 1rem;
         border-bottom: 1px solid #f0f0f0;
+        transition: all 0.3s;
+        font-size: 0.9rem;
+        display: block;
+    }
+
+
+
+    .nav-menu .nav-link:hover {
+        background: #f8f9fa;
+        padding-left: 1.2rem;
     }
 
     .nav-menu.active {
         left: 0;
     }
+    
+
 
     .nav-toggle {
         display: flex;
@@ -925,5 +2047,116 @@ body {
 
     .features-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .office-locations {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-form-wrapper {
+        margin-top: 2rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tours-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fleet-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wedding-cars-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .options-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .wedding-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .branches-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .custom-features {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .rental-form .form-row {
+        flex-direction: column;
+    }
+    
+    .wedding-form .form-row {
+        flex-direction: column;
+    }
+    
+    .floating-buttons {
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    .whatsapp-btn, .scroll-top-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
     }
 }

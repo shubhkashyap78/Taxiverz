@@ -75,14 +75,15 @@
                         <h3>Send Message</h3>
                         <p>Quick response guaranteed</p>
                     </div>
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="160ce8ff-c9a7-4e52-84b3-c3415c3cc08d">
                         <div class="form-row">
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-row">
-                            <input type="tel" placeholder="Your Phone" required>
-                            <select required>
+                            <input type="tel" name="phone" placeholder="Your Phone" required>
+                            <select name="service" required>
                                 <option value="">Select Service</option>
                                 <option value="local">Local Taxi</option>
                                 <option value="outstation">Outstation</option>
@@ -90,7 +91,7 @@
                                 <option value="rental">Car Rental</option>
                             </select>
                         </div>
-                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
                         <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>

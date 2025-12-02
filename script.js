@@ -162,22 +162,143 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
-// Scroll to top functionality
-const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        scrollTopBtn.classList.add('show');
-    } else {
-        scrollTopBtn.classList.remove('show');
+// Chatbot Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotWindow = document.getElementById('chatbot-window');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+
+    if (!chatbotToggle || !chatbotWindow) return;
+
+// Toggle chatbot
+chatbotToggle.addEventListener('click', () => {
+    chatbotWindow.classList.toggle('active');
+});
+
+chatbotClose.addEventListener('click', () => {
+    chatbotWindow.classList.remove('active');
+});
+
+// Send message
+function sendMessage() {
+    const message = chatbotInput.value.trim();
+    if (message) {
+        addMessage(message, 'user');
+        chatbotInput.value = '';
+        
+        // Bot response
+        setTimeout(() => {
+            const response = getBotResponse(message);
+            addMessage(response, 'bot');
+        }, 1000);
+    }
+}
+
+chatbotSend.addEventListener('click', sendMessage);
+chatbotInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        sendMessage();
     }
 });
 
-if (scrollTopBtn) {
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+// Add message to chat
+function addMessage(text, sender) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = sender === 'user' ? 'user-message' : 'bot-message';
+    messageDiv.innerHTML = `<p>${text}</p>`;
+    chatbotMessages.appendChild(messageDiv);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 }
+
+// Bot responses
+function getBotResponse(message) {
+    const msg = message.toLowerCase();
+    
+    if (msg.includes('hello') || msg.includes('hi')) {
+        return 'Hello! Welcome to Taxiverz. How can I help you today?';
+    } else if (msg.includes('booking') || msg.includes('book')) {
+        return 'To book a taxi, please call us at +91-8576000074 or use our booking form on the website.';
+    } else if (msg.includes('price') || msg.includes('fare')) {
+        return 'Our fares start from ₹8/km for local rides and ₹12/km for outstation trips. Contact us for exact quotes.';
+    } else if (msg.includes('contact') || msg.includes('phone')) {
+        return 'You can reach us at +91-8576000074 or email cabtaxiverz@gmail.com';
+    } else if (msg.includes('service') || msg.includes('area')) {
+        return 'We provide services in 500+ cities across India including local taxi, outstation, airport transfers, and car rentals.';
+    } else if (msg.includes('thank')) {
+        return 'You\'re welcome! Is there anything else I can help you with?';
+    } else {
+        return 'Thank you for your message. For detailed assistance, please call us at +91-8576000074 or email cabtaxiverz@gmail.com';
+    }
+}
+
+});
+// Simple Booking Modal Function
+function openBookingModal(carName, carPrice) {
+    const modal = document.getElementById('bookingModal');
+    const modalTitle = document.querySelector('.modal-header h2');
+    
+    if (modal && modalTitle) {
+        modalTitle.textContent = `Book ${carName} - ${carPrice}`;
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// Close modal function
+function closeModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Modal event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('bookingModal');
+    const closeBtn = document.querySelector('.close');
+    const bookingForm = document.querySelector('.booking-modal-form');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    if (modal) {
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    // ESC key to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+            closeModal();
+        }
+    });
+
+    // Prevent modal content clicks from closing modal
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = bookingForm.querySelector('input[placeholder="Your Name"]').value;
+            const phone = bookingForm.querySelector('input[placeholder="Phone Number"]').value;
+            
+            if (name && phone) {
+                alert(`Booking Request Submitted!\nName: ${name}\nPhone: ${phone}\n\nWe will contact you shortly.`);
+                bookingForm.reset();
+                closeModal();
+            }
+        });
+    }
+});

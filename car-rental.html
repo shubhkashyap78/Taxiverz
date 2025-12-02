@@ -15,9 +15,9 @@
                 <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="logo-img">
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="tours.html" class="nav-link">Tours</a>
                 <a href="car-rental.html" class="nav-link active">Car Rental</a>
+                <a href="tours.html" class="nav-link">Local Taxi</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="wedding.html" class="nav-link">Wedding Cars</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -76,178 +76,208 @@
             <h2>Our Car Fleet</h2>
             <div class="fleet-grid">
                 <div class="car-card">
-                    <div class="car-image">
-                        <i class="fas fa-car fa-4x"></i>
-                    </div>
+                    <img src="car2.jpeg" alt="Premium Sedan" class="car-image-real">
                     <div class="car-details">
-                        <h3>Sedan Cars</h3>
-                        <p class="car-models">Swift Dzire, Honda Amaze, Maruti Ciaz</p>
-                        <ul class="car-features">
-                            <li><i class="fas fa-users"></i> 4 Passengers</li>
-                            <li><i class="fas fa-suitcase"></i> 2 Large Bags</li>
-                            <li><i class="fas fa-snowflake"></i> AC Available</li>
-                            <li><i class="fas fa-gas-pump"></i> Fuel Efficient</li>
-                        </ul>
+                        <h3>Premium Sedan</h3>
+                        <p class="car-models">Mercedes Benz</p>
                         <div class="car-price">₹12/km</div>
-                        <button class="btn-primary">Book Now</button>
+                        <button class="btn-primary" onclick="openBookingModal('Premium Sedan', '₹12/km')">Book Now</button>
                     </div>
                 </div>
 
                 <div class="car-card">
-                    <div class="car-image">
-                        <i class="fas fa-car-side fa-4x"></i>
-                    </div>
+                    <img src="car3.jpeg" alt="Luxury SUV" class="car-image-real">
                     <div class="car-details">
-                        <h3>SUV Cars</h3>
-                        <p class="car-models">Innova Crysta, Ertiga, XUV500</p>
-                        <ul class="car-features">
-                            <li><i class="fas fa-users"></i> 6-7 Passengers</li>
-                            <li><i class="fas fa-suitcase"></i> 4 Large Bags</li>
-                            <li><i class="fas fa-snowflake"></i> AC Available</li>
-                            <li><i class="fas fa-road"></i> Comfortable</li>
-                        </ul>
+                        <h3>Luxury SUV</h3>
+                        <p class="car-models">Innova Crysta, Ertiga</p>
                         <div class="car-price">₹18/km</div>
-                        <button class="btn-primary">Book Now</button>
+                        <button class="btn-primary" onclick="openBookingModal('Luxury SUV', '₹18/km')">Book Now</button>
                     </div>
                 </div>
 
                 <div class="car-card">
-                    <div class="car-image">
-                        <i class="fas fa-car fa-4x"></i>
-                    </div>
+                    <img src="car4.jpeg" alt="Compact Hatchback" class="car-image-real">
                     <div class="car-details">
-                        <h3>Hatchback Cars</h3>
+                        <h3>Compact Hatchback</h3>
                         <p class="car-models">Swift, i20, Baleno</p>
-                        <ul class="car-features">
-                            <li><i class="fas fa-users"></i> 4 Passengers</li>
-                            <li><i class="fas fa-suitcase"></i> 1 Large Bag</li>
-                            <li><i class="fas fa-snowflake"></i> AC Available</li>
-                            <li><i class="fas fa-city"></i> City Friendly</li>
-                        </ul>
                         <div class="car-price">₹10/km</div>
-                        <button class="btn-primary">Book Now</button>
+                        <button class="btn-primary" onclick="openBookingModal('Compact Hatchback', '₹10/km')">Book Now</button>
                     </div>
                 </div>
 
                 <div class="car-card">
-                    <div class="car-image">
-                        <i class="fas fa-car-side fa-4x"></i>
-                    </div>
+                    <img src="car5.jpeg" alt="Executive Sedan" class="car-image-real">
                     <div class="car-details">
-                        <h3>Luxury Cars</h3>
-                        <p class="car-models">Camry, Accord, BMW 3 Series</p>
-                        <ul class="car-features">
-                            <li><i class="fas fa-users"></i> 4 Passengers</li>
-                            <li><i class="fas fa-suitcase"></i> 3 Large Bags</li>
-                            <li><i class="fas fa-star"></i> Premium Interior</li>
-                            <li><i class="fas fa-shield-alt"></i> Enhanced Safety</li>
-                        </ul>
+                        <h3>Executive Sedan</h3>
+                        <p class="car-models">Camry, Accord</p>
+                        <div class="car-price">₹25/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Executive Sedan', '₹25/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car6.jpeg" alt="Family SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Family SUV</h3>
+                        <p class="car-models">XUV500, Scorpio</p>
+                        <div class="car-price">₹20/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Family SUV', '₹20/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car7.jpeg" alt="Premium Hatchback" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Premium Hatchback</h3>
+                        <p class="car-models">Elite i20, Polo</p>
+                        <div class="car-price">₹11/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Premium Hatchback', '₹11/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car8.jpeg" alt="Luxury Sedan" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Luxury Sedan</h3>
+                        <p class="car-models">BMW 3 Series, Audi A4</p>
                         <div class="car-price">₹35/km</div>
-                        <button class="btn-primary">Book Now</button>
+                        <button class="btn-primary" onclick="openBookingModal('Luxury Sedan', '₹35/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car9.jpeg" alt="Multi-Purpose Vehicle" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Multi-Purpose Vehicle</h3>
+                        <p class="car-models">Marazzo, Hexa</p>
+                        <div class="car-price">₹16/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Multi-Purpose Vehicle', '₹16/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car10.jpeg" alt="Economy Car" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Economy Car</h3>
+                        <p class="car-models">Alto, Wagon R</p>
+                        <div class="car-price">₹8/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Economy Car', '₹8/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car11.jpeg" alt="Premium SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Premium SUV</h3>
+                        <p class="car-models">Fortuner, Endeavour</p>
+                        <div class="car-price">₹30/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Premium SUV', '₹30/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car12.jpeg" alt="Compact SUV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Compact SUV</h3>
+                        <p class="car-models">Brezza, Nexon</p>
+                        <div class="car-price">₹14/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Compact SUV', '₹14/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car13.jpeg" alt="Executive MPV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Executive MPV</h3>
+                        <p class="car-models">Innova, Carens</p>
+                        <div class="car-price">₹22/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Executive MPV', '₹22/km')">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <img src="car14.jpeg" alt="Luxury MPV" class="car-image-real">
+                    <div class="car-details">
+                        <h3>Luxury MPV</h3>
+                        <p class="car-models">Alphard, V-Class</p>
+                        <div class="car-price">₹40/km</div>
+                        <button class="btn-primary" onclick="openBookingModal('Luxury MPV', '₹40/km')">Book Now</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rental Form -->
-    <section class="rental-booking">
-        <div class="container">
-            <div class="booking-section">
-                <h2>Book Your Car Rental</h2>
-                <form class="rental-form">
-                    <div class="form-row">
-                        <select class="input-field" required>
-                            <option value="">Select Car Type</option>
-                            <option value="hatchback">Hatchback</option>
-                            <option value="sedan">Sedan</option>
-                            <option value="suv">SUV</option>
-                            <option value="luxury">Luxury</option>
-                        </select>
-                        <select class="input-field" required>
-                            <option value="">Rental Duration</option>
-                            <option value="hourly">Hourly</option>
-                            <option value="daily">Daily</option>
-                            <option value="weekly">Weekly</option>
-                            <option value="monthly">Monthly</option>
-                        </select>
-                    </div>
-                    <div class="form-row">
-                        <input type="text" placeholder="Pickup Location" class="input-field" required>
-                        <input type="datetime-local" class="input-field" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="text" placeholder="Your Name" class="input-field" required>
-                        <input type="tel" placeholder="Phone Number" class="input-field" required>
-                    </div>
-                    <textarea placeholder="Special Requirements" class="input-field" rows="3"></textarea>
-                    <button type="submit" class="btn-primary">Get Quote</button>
-                </form>
-            </div>
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Car</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Selected Car:</label>
+                    <input type="text" id="selectedCar" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Rate:</label>
+                    <input type="text" id="carRate" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone:</label>
+                    <input type="tel" id="customerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="customerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Pickup Date:</label>
+                    <input type="date" id="pickupDate" required>
+                </div>
+                <div class="form-group">
+                    <label>Pickup Time:</label>
+                    <input type="time" id="pickupTime" required>
+                </div>
+                <div class="form-group">
+                    <label>Pickup Location:</label>
+                    <input type="text" id="pickupLocation" required>
+                </div>
+                <div class="form-group">
+                    <label>Drop Location:</label>
+                    <input type="text" id="dropLocation" required>
+                </div>
+                <button type="submit" class="btn-primary">Submit Booking</button>
+            </form>
         </div>
-    </section>
+    </div>
 
-    <!-- Features -->
-    <section class="rental-features">
-        <div class="container">
-            <h2>Why Choose Our Car Rental?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-user-tie"></i>
-                    <h4>Professional Drivers</h4>
-                    <p>Experienced and licensed drivers with local knowledge</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-tools"></i>
-                    <h4>Well Maintained Cars</h4>
-                    <p>Regular servicing and maintenance for safe travel</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-gas-pump"></i>
-                    <h4>Fuel Included</h4>
-                    <p>All fuel costs included in the rental price</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-headset"></i>
-                    <h4>24/7 Support</h4>
-                    <p>Round the clock customer support and assistance</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script>
+        function openBookingModal(carType, rate) {
+            document.getElementById('selectedCar').value = carType;
+            document.getElementById('carRate').value = rate;
+            document.getElementById('bookingModal').style.display = 'block';
+        }
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="images/taxiverz.avif" alt="Taxiverz Logo" class="footer-logo-img">
-                    </div>
-                    <p>Your trusted travel partner</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+918576000074">+91-8576000074</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:cabtaxiverz@gmail.com">cabtaxiverz@gmail.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> Railway Station Gate No-1, Gorakhpur, UP-273001</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Shop No-4 Chaudhari Heights Above Swarna Hotel, Warje, Pune, Maharashtra-411058</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Taxiverz. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
 
-    <script src="script.js"></script>
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Booking submitted successfully! We will contact you soon.');
+            closeBookingModal();
+        });
+    </script>
 </body>
 </html>

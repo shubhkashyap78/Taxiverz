@@ -78,6 +78,161 @@
     color: #FF6600;
 }
 
+/* Enhanced Pricing Table */
+.pricing-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #FF6600;
+    margin-bottom: 30px;
+}
+
+.pricing-header {
+    background: linear-gradient(135deg, #FF6600, #E55A00);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.pricing-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.pricing-body {
+    padding: 0;
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.3s ease;
+}
+
+.pricing-row:hover {
+    background: #f8f9fa;
+}
+
+.pricing-row:last-child {
+    border-bottom: none;
+}
+
+.car-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.car-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.car-specs {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.price-tag {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FF6600;
+}
+
+.price-note {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Professional Fare Table */
+.fare-table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #FF6600;
+    margin-bottom: 30px;
+}
+
+.fare-header {
+    background: linear-gradient(135deg, #FF6600, #E55A00);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.fare-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.fare-table-wrapper {
+    overflow-x: auto;
+}
+
+.fare-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.fare-table th {
+    background: #f8f9fa;
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e9ecef;
+    font-size: 0.9rem;
+}
+
+.fare-table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.fare-table tr:hover {
+    background: #f8f9fa;
+}
+
+.fare-table .vehicle-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.fare-table .rate {
+    color: #FF6600;
+    font-weight: 600;
+}
+
+.fare-table .cost {
+    color: #FF6600;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.fare-table .trip-type {
+    background: #e8f5e8;
+    color: #2d5a2d;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
 /* Places to Visit Section */
 .places-to-visit {
     margin-bottom: 50px;
@@ -267,6 +422,27 @@
     .route-info {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    
+    .pricing-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
+    }
+    
+    .price-tag {
+        align-self: flex-end;
+    }
+    
+    .fare-table-wrapper {
+        overflow-x: auto;
+    }
+    
+    .fare-table th,
+    .fare-table td {
+        padding: 12px 8px;
+        font-size: 0.8rem;
     }
     
     .route-card, .pricing-card {
